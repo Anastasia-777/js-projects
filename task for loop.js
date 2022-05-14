@@ -122,8 +122,54 @@ let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 for (i = 0; i < days.length; i++) {
     if (days[i] == 'Sat' || days[i] == 'Sun') {
         let weekend = days[i];
-        console.log(weekend.bold());
+        console.log(`<b>${weekend}</b>`);
     } else {
         console.log(days[i]);
+    }
+}
+
+/* Задача 12. Составьте массив дней недели. С помощью цикла for выведите все дни недели, а текущий день выведите курсивом.
+Текущий день должен храниться в переменной day */
+
+let week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+let day = new Date;
+
+for (i = 0; i < week.length; i++) {
+    if (i == day.getDay()) {
+        console.log(`<i>${week[i]}<i>`);
+    } else {
+        console.log(week[i]);
+    }
+}
+
+/* Задача 13. Дано число n=1000. Делите его на 2 столько раз, пока результат деления не станет меньше 50.
+Какое число получится? Посчитайте количество итераций, необходимых для этого, и запишите его в переменную num */
+
+let num = 1000;
+let count = 0;
+
+while (num > 50) {
+    num = num / 2;
+    count++;
+}
+
+console.log(num);
+console.log(count);
+
+// Задача 14. При помощи цикла for выведите чётные числа от 2 до 10. 
+
+for (i = 2; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log('Четные числа ' + i)
+    }
+}
+
+// Второй вариант 
+
+let arr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+        console.log('Четные числа ' + arr[i]);
     }
 }
