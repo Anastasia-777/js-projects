@@ -1,0 +1,160 @@
+<!-- Задача 1. Alert по нажатию на кнопку. -->
+
+<button onclick="alert('Привет!')">Нажми на меня</button>
+
+<!-- Задача 2. Изменение текста в input по нажатию на нее (меняется текст в input) -->
+
+<html>
+
+<input id='input' value='Какой-то текст'>
+<button onClick='buttonClick()'>Нажми на меня,чтобы сменить текст</button>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let input = document.getElementById('input');
+        input.value = 'Текст сменился!';
+    }
+</script>
+
+<!-- Задача 3. Вывод содержимого input. Повторить поведение кнопки по нажатию на нее (выводит в alert содержимое из
+input) -->
+
+<html>
+
+<input id='input' value='Тест тест тест'>
+<button onClick='buttonClick()'>Нажми, чтобы вывести в alert</button>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let input = document.getElementById('input');
+        alert(input.value);
+    }
+</script>
+
+
+<!-- Задача 4. Квадрат содержимого input. Повторить поведение кнопки по нажатию на нее (выводит в alert содержимое из
+input, возведенное в квадрат) -->
+
+<html>
+
+<input id='input' placeholder='Введите число'>
+<button onClick='buttonClick()'>Возвести число в квадрат</button>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let input = document.getElementById('input');
+        let num = Number(input.value);
+        let square = num * num;
+        alert(square);
+    } 
+</script>
+
+
+
+<!-- Задача 5. Обмен содержимым между input. Повторить поведение кнопки по нажатию на нее (осуществляется обмен содержимым
+между двумя input, можно нажимать несколько раз или вручную сменить содержимое input) -->
+
+
+<html>
+
+<input id='input' value='Содержимое первого поля'>
+<input id='input2' value='Содержимое второго поля'>
+<button onClick='buttonClick()'>Поменять местами</button>
+
+</html>
+
+
+<script>
+    function buttonClick() {
+        let input = document.getElementById('input');
+        let input2 = document.getElementById('input2');
+
+        let inputValue1 = input.value;
+        let inputValue2 = input2.value;
+
+        input.value = inputValue2;
+        input2.value = inputValue1;
+    }
+</script>
+
+
+<!-- Задача 6. По нажатию на кнопку меняется ее текст. Повторить поведение кнопки по нажатию на нее (поменяется текст). Решить через input -->
+
+<html>
+
+<input type="button" id='click' onClick='buttonClick()' value='Старый текст кнопки'>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let newText = document.getElementById('click');
+        newText.value = 'Новый текст кнопки';
+    }
+</script>
+
+<!-- Задача 7. Работа с CSS. Повторить поведение кнопки по нажатию на нее (меняется цвет текста в input) -->
+
+<html>
+
+<input id='input' value='Здесь меняется цвет'>
+<button onClick='buttonClick()'>Поменять цвет</button>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let defaultColor = document.getElementById('input');
+        defaultColor.style.color = 'red';
+    }
+</script>
+
+<!-- Задача 8. Блокирование полей ввода. Повторить поведение кнопок по нажатию на них (одна из них блокирует input с
+помощью атрибута disabled, а другая разблокирует) -->
+
+<html>
+
+<input id='input' value='Текст текст текст'>
+<button onClick='buttonClick()'>Разблокировать</button>
+<button onClick='disabledClick()'>Заблокировать</button>
+
+</html>
+
+<script>
+    function buttonClick() {
+        let input = document.getElementById('input');
+        input.disabled = false;
+    }
+
+    function disabledClick() {
+        let input = document.getElementById('input');
+        input.disabled = true;
+    }
+</script>
+
+
+<!-- Задача 9. При наведении на input вывести alert -->
+
+<button onmouseover="alert('Разблокировать')">Разблокировать</button>
+
+<!-- Задача 10. При двойном клике input вывести alert -->
+
+<input ondblclick="alert('Ты кликнул дважды')" id='input' type='button' value='Кликни дважды'>
+
+<!-- Задача 11. Дан некий элемент. Когда курсор мыши выходит за пределы элемента, нужно вывести alert -->
+
+<div onmouseout="alert('Привет')" class="block">Я вызываю alert</div>
+
+<style>
+    .block {
+        height: 100px;
+        width: 200px;
+        border: 2px solid red;
+    }
+</style>
