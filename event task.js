@@ -33,3 +33,18 @@ function func() {
   elem[i].setAttribute
 }
 </script>
+
+// Задача 3. Напишите функцию которая показывает координаты курсора мыши
+
+<div id='block'>Координата x: 0  Координата y: 0</div>
+
+
+<script>
+
+window.addEventListener('mousemove', find);
+
+function find(event) {
+  document.getElementById('block').innerHTML = 'Координата x: ' + event.clientX + ' Координата y: ' + event.clientY;
+}
+
+</script>
