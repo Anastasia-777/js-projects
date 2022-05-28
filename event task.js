@@ -48,3 +48,22 @@ function find(event) {
 }
 
 </script>
+
+// Задача 4. Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит.
+
+<p>2</p>
+<p>3</p>
+<p>4</p>
+
+<script>
+
+let count = document.getElementsByTagName('p');
+for (let i = 0; i < count.length; i++) {
+  count[i].addEventListener('click', sum);
+}
+
+function sum() {
+  this.innerHTML = this.innerHTML * this.innerHTML;
+}
+
+</script>
