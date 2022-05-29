@@ -67,3 +67,30 @@ function sum() {
 }
 
 </script>
+
+// Задача 5. Даны дивы. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так далее каждый клик происходит чередование фона.
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+
+<script>
+
+let elem = document.getElementsByTagName('div');
+for (let i = 0; i < elem.length; i++) {
+	elem[i].addEventListener('click', colorRed);
+}
+
+function colorRed() {
+	this.style.background = 'red';
+	this.removeEventListener('click', colorRed);
+	this.addEventListener('click', colorGreen);
+}
+
+function colorGreen() {
+	this.style.background = 'green';
+	this.removeEventListener('click', colorGreen);
+	this.addEventListener('click', colorRed);
+}
+
+</script>
