@@ -94,3 +94,21 @@ function colorGreen() {
 }
 
 </script>
+
+// Задача 6. Написать функцию, которая считывает значения с инпутов и выводит в блок <div> их сумму.
+
+<input type="text" id="num1">
+<input type="text" id="num2">
+<div id="answer"></div>
+<button type="button" onclick="sum()">Посчитать</button>
+
+<script>
+
+function sum() {
+  const num1 = +document.querySelector('#number1').value;
+  const num2 = +document.querySelector('#number2').value;
+  const sum = num1 + num2;
+  document.querySelector('#answer').textContent = sum;
+}
+
+</script>
