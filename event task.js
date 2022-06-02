@@ -97,8 +97,8 @@ function colorGreen() {
 
 // Задача 6. Написать функцию, которая считывает значения с инпутов и выводит в блок <div> их сумму.
 
-<input type="text" id="num1">
-<input type="text" id="num2">
+<input type="text" id="num1"/>
+<input type="text" id="num2"/>
 <div id="answer"></div>
 <button type="button" onclick="sum()">Посчитать</button>
 
@@ -109,6 +109,19 @@ function sum() {
   const num2 = +document.querySelector('#number2').value;
   const sum = num1 + num2;
   document.querySelector('#answer').textContent = sum;
+}
+
+</script>
+
+// Задача 7. По клику на кнопку скрывать текст в инпуте : 
+
+<input type="button" id="but" value="Нажмите, чтобы спрятать текст"/>
+<div id="hide">Скрыть этот текст</div>
+
+<script>
+
+document.getElementById('but').onclick = () => {
+  document.getElementById('hide').style.display = 'none';
 }
 
 </script>
