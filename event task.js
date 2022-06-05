@@ -125,3 +125,7 @@ document.getElementById('but').onclick = () => {
 }
 
 </script>
+
+// Задача 8. Создайте кнопку, при клике на которую, она будет скрывать сама себя. Решение задачи заключается в использовании this в обработчике.
+
+<input type="button" onclick="this.style.display='none'" value="Нажми, чтобы скрыть"/>
